@@ -38,7 +38,6 @@ sudo yum install kubeadm .............     (on both the nodes)
 systemctl restart docker && systemctl enable docker && systemctl restart kubelet && systemctl enable kubelet ----(on both the nodes)
 
 
-
 5. Only on the Master Node:
 ------------------------------
 On the master node initialize the cluster.
@@ -46,9 +45,7 @@ On the master node initialize the cluster.
 kubeadm init --apiserver-advertise-address 172.31.21.224 (private ip) --pod-network-cidr 192.168.0.0/16
 kubeadm init --apiserver-advertise-address 172.31.21.224 --pod-network-cidr 192.168.0.0/16
 
-
-
-6.Wait for around 4 minutes. 
+6. Wait for around 4 minutes. 
 -----------------------------
 Following commands will appear on the output screen of the master node. 
 apply it on the master’s terminal.
